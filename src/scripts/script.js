@@ -1,4 +1,4 @@
-let telEl = document.querySelector('#tel').addEventListener('keyup', e => {
+document.querySelector('#tel').addEventListener('keyup', e => {
   let val = e.target.value;
   e.target.value = val
     .replace(/\D/g, '')
@@ -23,7 +23,7 @@ let telEl = document.querySelector('#tel').addEventListener('keyup', e => {
       }
     });
 });
-let t = document.querySelectorAll('input').forEach(e =>
+document.querySelectorAll('input').forEach(e =>
   e.addEventListener('keyup', e => {
     checkValidity();
   })

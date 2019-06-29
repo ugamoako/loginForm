@@ -1,25 +1,17 @@
 $body-bg: blue;
 $text-grey: #cc4eff;
 $white-color: #ffffff;
-$background_color_1: #e7492d;
-@font-face {
-  font-family: 'FontAwesome';
-  //in url add your folder path of FontAwsome Fonts
-  src: url('../css/fa-regular-400.ttf') format('truetype');
-}
+$deep-grey: #979797;
+$red-error: #e7492d;
+
 body {
-  background: url('../images/purple_sunset-wallpaper-1920x1080.jpg') no-repeat
+  background: url('../img/purple_sunset-wallpaper-1920x1080.jpg') no-repeat
     center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin: 0 auto;
-  /*
-  height: 100vh;
-  background: url('../images/purple_sunset-wallpaper-1920x1080.jpg');
-  background-repeat: no-repeat;
-  color: $text-grey;*/
 }
 .overlay {
   height: 100vh;
@@ -49,27 +41,27 @@ form {
 input {
   margin: 15px 0;
   padding: 10px;
-  border: 1px solid #979797;
+  border: 1px solid $deep-grey;
   border-radius: 20px;
   width: 100%;
   font-size: 20px;
   text-align: center;
   box-sizing: border-box;
   &:valid {
-    background: url(../images/outline-done-24px.svg);
+    background: url('../img/outline-done-24px.svg');
     background-position: center right;
     background-repeat: no-repeat;
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid $white-color;
+    color: $white-color;
   }
 
   &:focus {
     &:invalid {
-      background: url(../images/baseline-error-24px.svg);
+      background: url('../img/baseline-error-24px.svg');
       background-repeat: no-repeat;
       background-position: center right;
-      background-color: #ffffff;
-      color: #e7492d;
+      background-color: $white-color;
+      color: $red-error;
     }
   }
 }
@@ -77,32 +69,32 @@ input[type='password'] {
   background: transparent;
   color: $white-color;
   &:valid {
-    background-color: #ffffff;
+    background-color: $white-color;
     color: black;
   }
 }
 button {
   &:disabled {
-    color: #979797;
+    color: $deep-grey;
     &:hover {
-      background: rgba($color: #979797, $alpha: 0);
+      background: rgba($color: $deep-grey, $alpha: 0);
     }
   }
   &:hover {
-    background: rgba($color: #979797, $alpha: 0.2);
+    background: rgba($color: $deep-grey, $alpha: 0.2);
   }
 }
 .btn {
   background: transparent;
   border: none;
-  color: #ececec;
+  color: $white-color;
 
   &-primary {
     justify-content: center;
     padding: 10px 30px;
     margin-top: 15px;
     border-radius: 20px;
-    border: 1px solid #979797;
+    border: 1px solid $deep-grey;
   }
   &-left {
     margin-left: -200px;
@@ -131,7 +123,7 @@ button {
     }
     &:focus {
       & + .slider {
-        box-shadow: 0 0 1px $background_color_1;
+        box-shadow: 0 0 1px $red-error;
       }
     }
   }
@@ -162,7 +154,7 @@ button {
     width: 18px;
     left: 3px;
     bottom: 3px;
-    background-color: rgba($color: #979797, $alpha: 0.5);
+    background-color: rgba($color: $deep-grey, $alpha: 0.5);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
